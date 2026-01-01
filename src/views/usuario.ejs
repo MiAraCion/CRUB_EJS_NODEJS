@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+        <form action="/buscarUsuario" method="POST">
+                <input type="text" name="nombre">
+                <button type="submit">Buscar</button>
+                
+                <table style="border: 1px solid;">
+                        <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>email</th>
+                                <th>ubicacion</th>
+                        </tr>                                
+                        <%rpt.forEach(item=>{%>
+
+                        <tr>
+                                <td><%=item.idUsuario%></td>
+                                <td><%=item.nombre%></td>
+                                <td><%=item.correo%></td>
+                                <td><%=item.ubicacion%></td>
+                        </tr>
+                        <%});%>
+                        
+                        
+
+                </table>                                     
+
+
+                
+                                                                
+        </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="/AgregarUsuario" method="post" style="border: solid;">
+                <label for="">Nombre</label>
+                <input type="text" name="nombre"><br>
+                <label for="">correo</label>
+                <input type="text" name="correo"><br>
+                <label for="">ubicacion</label>
+                <input type="text" name="ubicacion"><br>
+                <button type="submit">agregar</button>
+        </form>
+
+        
+
+
+
+</body>
+</html>
