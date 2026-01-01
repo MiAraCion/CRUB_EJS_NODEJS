@@ -6,6 +6,9 @@ const router = Router();
 //vista
 router.get("/usuario", controller.ListarUsuario);
 router.post("/AgregarUsuario", controller.AgregarUsuario);
+router.post("/buscarUsuario", controller.BuscarNombre);
+router.post("/ActualizarUsuario",controller.ActualizarUsuario);
+router.post("/eliminarUsuario", controller.EliminarPorId);
 
 
 export default router;
